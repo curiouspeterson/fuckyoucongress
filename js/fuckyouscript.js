@@ -68,11 +68,11 @@ $(document).ready(function() {
 			console.log(newLink);
 		
 			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-		
+			var prevLink = 'a.random-post-link[data-next="' + $id + '"]';
 			var $id = "#" + $id + " a.random-post-link";
 			console.log($id);
 			
-			var prevLink = 'a.random-post-link[data-next="' + location.pathname.substr(1) + '"]';
+			
 			
 			
 					$(prevLink).click();
