@@ -73,14 +73,11 @@ $(document).ready(function() {
 			console.log($id + '-link');
 			
 			var $id = "#" + $id + " a.random-post-link";
+			var $linkID = "#" + $id + "-link";
 			
-			console.log($id);
+			console.log($linkID);
 			
-			var linkyPoo = $($id).attr("id");
-			linkyPoo = linkyPoo + '-link';
-			console.log(linkyPoo)
-			
-					$(linkyPoo).click();
+					$($linkID).click();
 
 		    });
 		
