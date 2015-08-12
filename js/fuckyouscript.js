@@ -73,9 +73,9 @@ $(document).ready(function() {
 			console.log($id + '-link');
 			
 			var $id = "#" + $id + " a.random-post-link";
-			var $linkID = "#" + $id + "-link";
+			var $linkID = '#' + $id + '-link';
 			
-			console.log($linkID);
+			console.log($linkID	);
 			
 					$($linkID).click();
 
