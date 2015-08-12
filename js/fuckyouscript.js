@@ -69,15 +69,16 @@ $(document).ready(function() {
 			console.log(newLink);
 		
 			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-			var prevLink = $('a.random-post-link[data-next="' + $id + '"]').attr("id");
-			console.log(prevLink);
+			
+			console.log($id + '-link');
+			
 			var $id = "#" + $id + " a.random-post-link";
 			
 			console.log($id);
 			
 			var linkyPoo = $($id).attr("id");
 			linkyPoo = linkyPoo + '-link';
-			
+			console.log(linkyPoo)
 			
 					$(linkyPoo).click();
 
