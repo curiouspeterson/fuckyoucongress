@@ -59,25 +59,17 @@ $(document).ready(function() {
 
 	function init() {
 
-
+		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
+		var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
+		console.log(newLink);
+		
+		var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
+		
+		var $id = "#" + $id + " a.random-post-link";
+		console.log($id);
 		
 		$(function() {
-			
-			var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
-			var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
-			var prevLink = '';
-			console.log(newLink);
-		
-			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-			
-			console.log($id + '-link');
-			var $linkID = '#' + $id + '-link';
-			var $id = "#" + $id + " a.random-post-link";
-			
-			
-			console.log($linkID	);
-			
-					$($linkID).click();
+					$($id).click();
 
 		    });
 		
