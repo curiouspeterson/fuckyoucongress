@@ -264,6 +264,7 @@ $(document).ready(function() {
 		$('a.random-post-link').click(function(e) {
 			e.preventDefault();
 			e.stopPropagation();
+			console.log('clicked');
 			var $linkTitle = $(this).attr('title');
 			_gaq.push(['_trackEvent', 'There\'s Fucking More link', '' + $linkTitle + ' clicked', $linkTitle]);
 			$currentPost = $(this).data('this');
