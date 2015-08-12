@@ -60,6 +60,25 @@ $(document).ready(function() {
 	function init() {
 
 
+		
+		$(function() {
+			
+			var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
+			var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
+			console.log(newLink);
+		
+			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
+		
+			var $id = "#" + $id + " a.random-post-link";
+			console.log($id);
+					$($id).click();
+
+		    });
+		
+
+	
+	
+		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
 		twitterZip();
@@ -259,7 +278,6 @@ $(document).ready(function() {
 			var $linkTitle = $(this).attr('title');
 			_gaq.push(['_trackEvent', 'There\'s Fucking More link', '' + $linkTitle + ' clicked', $linkTitle]);
 			$currentPost = $(this).data('this');
-			console.log($currentPost);
 			$nextPost = $(this).data('next');
 			$($currentPost).fadeOut("slow", function() {
 				$newHeight = $($nextPost).outerHeight();
@@ -281,27 +299,6 @@ $(document).ready(function() {
 			
 		});
 	}
-
-
-
-	$(function() {
-		
-		var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-	
-		var $id = "#" + $id + " a.random-post-link";
-		$($id).click();
-		$currentPost = '#post-1';
-		$($currentPost).fadeOut("slow", function() {
-			$newHeight = $($nextPost).outerHeight();
-			$('#home-page-intro-inner').css('min-height', $newHeight);
-			$($currentPost).removeClass('current-post');
-			$($nextPost).addClass('current-post');
-			$($nextPost).fadeIn();
-		});
-
-	 });
-
-
 
 	function fullScreenSlide() {
 		var browserheight = $(window).height();
