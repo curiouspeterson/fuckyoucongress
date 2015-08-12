@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 	function init() {
 		
-		window.location = '';
+		window.history.pushState("object or string", "Title", "");
 	/*
 		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
 			var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
