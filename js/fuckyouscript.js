@@ -61,9 +61,13 @@ $(document).ready(function() {
 		console.log(location.pathname.substr(1));
 		
 		
-		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
+		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
+		var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
 	
 		$(newPath).addClass('active');
+		
+		
+		$(newlink).click();
 		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
