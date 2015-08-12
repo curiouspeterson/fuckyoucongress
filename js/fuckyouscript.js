@@ -76,6 +76,7 @@ $(document).ready(function() {
 			console.log($id);
 			
 			var linkyPoo = $($id).attr("id");
+			linkyPoo = linkyPoo + '-link';
 			
 			
 					$(linkyPoo).click();
