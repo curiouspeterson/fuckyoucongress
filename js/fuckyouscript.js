@@ -264,13 +264,15 @@ $(document).ready(function() {
 			});
 			document.title = $($nextPost).data('title');
 			var $path = $($nextPost).data('slug');
+			/*
 			if ($historySupported) {
-				history.pushState($path, base + $path, base + '/' + $path);
-				_gaq.push(['_trackPageview']);
-			} else {
-				$url = '"' + base + '/' + $path + '"';
-				window.location = $url;
-			}
+							history.pushState($path, base + $path, base + '/' + $path);
+							_gaq.push(['_trackPageview']);
+						} else {
+							$url = '"' + base + '/' + $path + '"';
+							window.location = $url;
+						}*/
+			
 		});
 	}
 
