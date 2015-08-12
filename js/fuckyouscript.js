@@ -288,7 +288,7 @@ $(document).ready(function() {
 		
 		if (location.pathname.substr(1)) {
 			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-			var $postNum = $('$id').prev();
+			var $postNum = $($id).prev();
 			console.log($postNum);
 			var $id = "#" + $id + " a.random-post-link";
 			$($id).click();
