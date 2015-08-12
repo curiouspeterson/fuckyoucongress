@@ -68,7 +68,7 @@ $(document).ready(function() {
 		var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
 		console.log(newLink);
 	
-		var $id = $(newPath).id();
+		var $id = $(newPath).id;
 		console.log( 'id ' + $id + '' );
 		
 		var $this = $(newLink);
