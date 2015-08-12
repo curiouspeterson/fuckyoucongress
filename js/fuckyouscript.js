@@ -292,8 +292,8 @@ $(document).ready(function() {
 			console.log($postNum);
 			var $id = "#" + $id + " a.random-post-link";
 			$($id).click();
-			$currentPost = '#post-1';
-			$nextPost = $($id).data('next');
+			var $currentPost = '#post-1';
+			var $nextPost = $($id).data('next');
 			$($currentPost).fadeOut("slow", function() {
 				$newHeight = $($nextPost).outerHeight();
 				$('#home-page-intro-inner').css('min-height', $newHeight);
