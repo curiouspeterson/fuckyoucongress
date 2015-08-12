@@ -54,9 +54,15 @@ $(document).ready(function() {
 			ajaxLoadContent(event.state);
 		}
 	}
+	
+	
 
 	function init() {
 		console.log(location.pathname.substr(1));
+		
+		var newPath = location.pathname.substr(1)
+		$('.slide-link[data-slide=newPath]').addClass('active');
+		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
 		twitterZip();
