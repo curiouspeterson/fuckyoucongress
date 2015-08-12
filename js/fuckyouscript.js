@@ -71,7 +71,11 @@ $(document).ready(function() {
 		
 			var $id = "#" + $id + " a.random-post-link";
 			console.log($id);
-					$($id).click();
+			
+			var prevLink = 'a.random-post-link[data-next="' + location.pathname.substr(1) + '"]';
+			
+			
+					$(prevLink).click();
 
 		    });
 		
