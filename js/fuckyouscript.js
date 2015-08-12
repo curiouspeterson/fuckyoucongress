@@ -290,6 +290,14 @@ $(document).ready(function() {
 	
 		var $id = "#" + $id + " a.random-post-link";
 		$($id).click();
+		$currentPost = '#post-1';
+		$($currentPost).fadeOut("slow", function() {
+			$newHeight = $($nextPost).outerHeight();
+			$('#home-page-intro-inner').css('min-height', $newHeight);
+			$($currentPost).removeClass('current-post');
+			$($nextPost).addClass('current-post');
+			$($nextPost).fadeIn();
+		});
 
 	 });
 
