@@ -288,11 +288,10 @@ $(document).ready(function() {
 		
 		if (location.pathname.substr(1)) {
 			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-			
+	
 			var $id = "#" + $id + " a.random-post-link";
 			$($id).click();
-			var $currentPost = '#post-1';
-			var $nextPost = $($id).data('next');
+			$currentPost = '#post-1';
 			$($currentPost).fadeOut("slow", function() {
 				$newHeight = $($nextPost).outerHeight();
 				$('#home-page-intro-inner').css('min-height', $newHeight);
@@ -300,7 +299,10 @@ $(document).ready(function() {
 				$($nextPost).addClass('current-post');
 				$($nextPost).fadeIn();
 			});
-		 }
+		}
+		
+		
+
 	 });
 
 
