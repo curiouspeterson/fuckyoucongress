@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var base = $('#blogURL').attr('href'),
+	var base = '',
 		$firstPostLink = $('#first-post-link').attr('href'),
 		$mainContent = $("#ajax-container"),
 		$innerContainer = $('#content'),
