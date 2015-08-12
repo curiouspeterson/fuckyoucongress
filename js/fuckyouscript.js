@@ -293,8 +293,6 @@ $(document).ready(function() {
 		$($id).click();
 		$currentPost = '#post-1';
 		$($currentPost).fadeOut("slow", function() {
-			$newHeight = $($nextPost).outerHeight();
-			$('#home-page-intro-inner').css('min-height', $newHeight);
 			$($currentPost).removeClass('current-post');
 		});
 	 }
