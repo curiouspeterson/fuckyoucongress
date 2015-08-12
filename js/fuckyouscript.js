@@ -58,6 +58,9 @@ $(document).ready(function() {
 	
 
 	function init() {
+		var d = new Date(); // for now
+
+		console.log(d.getMinutes());
 		console.log(location.pathname.substr(1));
 		
 		
