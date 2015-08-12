@@ -77,7 +77,7 @@ $(document).ready(function() {
 			
 			
 			
-					$(prevLink).click();
+					$($id).click();
 
 		    });
 		
