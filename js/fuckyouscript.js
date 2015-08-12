@@ -72,6 +72,7 @@ $(document).ready(function() {
 		
 		
 		var $this = $(newLink);
+		console.log('this' + $this + '');
 		
 		$this.click();
 		
