@@ -61,11 +61,7 @@ $(document).ready(function() {
 		console.log(location.pathname.substr(1));
 		
 		
-		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
-		
-		console.log(newPath);
-		
-		
+		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
 	
 		$(newPath).addClass('active');
 		
