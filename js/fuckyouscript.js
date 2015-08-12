@@ -66,7 +66,7 @@ $(document).ready(function() {
 		bindHoverFx();
 		fullScreenSlide();
 		mediaQueryCalculator();
-/*		$historySupported = isSupportedBrowserHistory();*/
+		$historySupported = isSupportedBrowserHistory();
 		$historySupported = false;
 		if ($historySupported) {
 			var current = location.protocol + '//' + location.hostname + location.pathname;
@@ -270,14 +270,14 @@ $(document).ready(function() {
 			});
 			document.title = $($nextPost).data('title');
 			var $path = $($nextPost).data('slug');
-			/*
+			
 			if ($historySupported) {
-							history.pushState($path, base + $path, base + '/' + $path);
-							_gaq.push(['_trackPageview']);
-						} else {
-							$url = '"' + base + '/' + $path + '"';
-							window.location = $url;
-						}*/
+				history.pushState($path, base + $path, base + '/' + $path);
+				_gaq.push(['_trackPageview']);
+			} else {
+				$url = '"' + base + '/' + $path + '"';
+				window.location = $url;
+			}
 			
 		});
 	}
@@ -286,19 +286,21 @@ $(document).ready(function() {
 
 	$(function() {
 		
-		var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-	
-		var $id = "#" + $id + " a.random-post-link";
-		$($id).click();
-		$currentPost = '#post-1';
-		$($currentPost).fadeOut("slow", function() {
-			$newHeight = $($nextPost).outerHeight();
-			$('#home-page-intro-inner').css('min-height', $newHeight);
-			$($currentPost).removeClass('current-post');
-			$($nextPost).addClass('current-post');
-			$($nextPost).fadeIn();
-		});
-
+		if (location.pathname.substr(1)) {
+			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
+			var $postNum = $($id).attr('id').replace(/post-/, '');
+			console.log($postNum);
+			var $id = "#" + $id + " a.random-post-link";
+			$($id).click();
+			$currentPost = '#post-1';
+			$($currentPost).fadeOut("slow", function() {
+				$newHeight = $($nextPost).outerHeight();
+				$('#home-page-intro-inner').css('min-height', $newHeight);
+				$($currentPost).removeClass('current-post');
+				$($nextPost).addClass('current-post');
+				$($nextPost).fadeIn();
+			});
+		 }
 	 });
 
 
