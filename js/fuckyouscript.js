@@ -73,6 +73,8 @@ $(document).ready(function() {
 		
 		var $this = $(newLink);
 		
+		$this.click();
+		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
 		twitterZip();
