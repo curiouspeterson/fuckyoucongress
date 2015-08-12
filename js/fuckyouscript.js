@@ -72,12 +72,13 @@ $(document).ready(function() {
 			var prevLink = $('a.random-post-link[data-next="' + $id + '"]').attr("id");
 			console.log(prevLink);
 			var $id = "#" + $id + " a.random-post-link";
+			
 			console.log($id);
 			
+			var linkyPoo = $($id).attr("id");
 			
 			
-			
-					$($id).click();
+					$(linkyPoo).click();
 
 		    });
 		
