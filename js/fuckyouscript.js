@@ -71,7 +71,7 @@ $(document).ready(function() {
 		$(newPath).addClass('active');
 		
 		
-		$(newLink).click();
+		var $this = $(newLink);
 		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
