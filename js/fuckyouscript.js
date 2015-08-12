@@ -61,13 +61,13 @@ $(document).ready(function() {
 		console.log(location.pathname.substr(1));
 		
 		
-		var numb = '.slide-link[data-slide="' + location.pathname.substr(1) + '"]';
+		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
 		
-		console.log(numb);
+		console.log(newPath);
 		
 		
-		var newPath = location.pathname.substr(1)
-		$('.post-content[data-slug=newPath]').addClass('active');
+	
+		$(newPath).addClass('active');
 		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
