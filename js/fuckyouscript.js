@@ -61,7 +61,7 @@ $(document).ready(function() {
 		console.log(location.pathname.substr(1));
 		
 		var newPath = location.pathname.substr(1)
-		$('.slide-link[data-slide=newPath]').addClass('active');
+		$('.slide-link[data-slug=newPath]').addClass('active');
 		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
