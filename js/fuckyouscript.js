@@ -290,11 +290,12 @@ $(document).ready(function() {
 		var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
 
 		var $id = "#" + $id + " a.random-post-link";
-		$($id).click();
+		
 		$currentPost = '#post-1';
 		$($currentPost).fadeOut("slow", function() {
 			$($currentPost).removeClass('current-post');
 		});
+		$($id).click();
 	 }
 	 });
 
