@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 	function init() {
 		
-		window.history.pushState("object or string", "Title", "");
+		window.history.pushState("Fuck You Congress", "Fuck You Congress", "");
 	/*
 		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
 			var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
