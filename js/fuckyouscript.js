@@ -286,23 +286,18 @@ $(document).ready(function() {
 
 	$(function() {
 		
-		if (location.pathname.substr(1)) {
-			var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
-	
-			var $id = "#" + $id + " a.random-post-link";
-			$($id).click();
-			$currentPost = '#post-1';
-			$($currentPost).fadeOut("slow", function() {
-				$newHeight = $($nextPost).outerHeight();
-				$('#home-page-intro-inner').css('min-height', $newHeight);
-				$($currentPost).removeClass('current-post');
-				$($nextPost).addClass('current-post');
-				$($nextPost).fadeIn();
-			});
-		}
-		
-		
+	if (location.pathname.substr(1)) {
+		var $id = $('.post-content[data-slug="' + location.pathname.substr(1) + '"]').attr("id");
 
+		var $id = "#" + $id + " a.random-post-link";
+		$($id).click();
+		$currentPost = '#post-1';
+		$($currentPost).fadeOut("slow", function() {
+			$newHeight = $($nextPost).outerHeight();
+			$('#home-page-intro-inner').css('min-height', $newHeight);
+			$($currentPost).removeClass('current-post');
+		});
+	 }
 	 });
 
 
