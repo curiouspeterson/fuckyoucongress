@@ -60,9 +60,8 @@ $(document).ready(function() {
 	function init() {
 		
 		$(function() {
-					$($id).click();
-					window.history.pushState("Fuck You Congress", "Fuck You Congress", "");
-		    });
+			window.history.pushState("Fuck You Congress", "Fuck You Congress", "");
+	    });
 		
 		
 	/*
