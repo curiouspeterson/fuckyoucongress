@@ -67,14 +67,10 @@ $(document).ready(function() {
 		var newPath = '.post-content[data-slug="' + location.pathname.substr(1) + '"]';
 		var newLink = '.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link';
 		console.log(newLink);
+		
+		$('.post-content[data-slug="' + location.pathname.substr(1) + '"] a.random-post-link').click();
 	
-		var $id = $(newPath).id;
-		console.log( 'id ' + $id + '' );
-		
-		var $this = $(newLink);
-		console.log('this' + $this + '');
-		
-		$this.click();
+	
 		
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
