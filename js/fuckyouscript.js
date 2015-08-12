@@ -60,6 +60,12 @@ $(document).ready(function() {
 	function init() {
 		console.log(location.pathname.substr(1));
 		
+		
+		var numb = '.slide-link[data-slide=' + location.pathname.substr(1) + ']';
+		
+		console.log(numb);
+		
+		
 		var newPath = location.pathname.substr(1)
 		$('.post-content[data-slug=newPath]').addClass('active');
 		
