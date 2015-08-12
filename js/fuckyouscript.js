@@ -56,7 +56,7 @@ $(document).ready(function() {
 	}
 
 	function init() {
-		console.log(location.pathname);
+		console.log(location.pathname.substr(1));
 		$newHeight = $('.current-post').outerHeight();
 		$('#home-page-intro-inner').css('min-height', $newHeight);
 		twitterZip();
